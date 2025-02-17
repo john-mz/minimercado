@@ -5,6 +5,7 @@
 --%>
 <%@ page import="modelos.Conexion" %>
 <%@ page import="modelos.usuarios" %>
+<%@ page import="modelos.PRODUCTOS" %>
 <%@ page import="java.sql.Connection" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
@@ -39,13 +40,39 @@
 //        e.printStackTrace();
 //    }
 //    ORDEN ELIMINAR USUARIO
-    try {
-        usuarios operaciones = new usuarios();
-        operaciones.eliminarUsuario(5);  
-    } catch (Exception e) {
-        out.println("<h2>Error: " + e.getMessage() + "</h2>");
-        e.printStackTrace();
-    }
+//    try {
+//        usuarios operaciones = new usuarios();
+//        operaciones.eliminarUsuario(5);  
+//    } catch (Exception e) {
+//        out.println("<h2>Error: " + e.getMessage() + "</h2>");
+//        e.printStackTrace();
+//    }
+
+//    ORDEN INSERTAR PRODUCTO
+//      try {
+//        PRODUCTOS operaciones = new PRODUCTOS();
+//        operaciones.insertarProducto("ALS32", "mouse model O", 7, 9000.0, 9900.0);
+//      } catch (Exception e) {
+//            out.println("<h2>Error: " + e.getMessage() + "</h2>");
+//            e.printStackTrace();
+//      }
+//     ORDEN EDITAR PRODUCTO
+//      try {
+//        PRODUCTOS operaciones = new PRODUCTOS();
+//        operaciones.editarProducto(12, "LAL322", "mouse m801plusx", 7, 10003.0, 20003.0);
+//      } catch (Exception e) {
+//            out.println("<h2>Error: " + e.getMessage() + "</h2>");
+//            e.printStackTrace();
+//      }
+//     ORDEN BORRAR PRODUCTO
+//      try {
+//        PRODUCTOS operaciones = new PRODUCTOS();
+//        operaciones.eliminarProducto(13);
+//      } catch (Exception e) {
+//            out.println("<h2>Error: " + e.getMessage() + "</h2>");
+//            e.printStackTrace();
+//      }
+        
     
 
 

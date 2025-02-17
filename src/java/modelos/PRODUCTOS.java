@@ -11,21 +11,22 @@ import java.sql.*;
  *
  * @author docente
  */
-public abstract class PRODUCTOS {
+//public abstract class PRODUCTOS {
+public class PRODUCTOS {
     protected String ref, nombre;
     protected double precio_compra, precio_venta;
     protected int id_proveedor;
 
-    public PRODUCTOS(String ref, String nombre, double precio_compra, double precio_venta, int id_proveedor) {
-        this.ref = ref;
-        this.nombre = nombre;
-        this.precio_compra = precio_compra;
-        this.precio_venta = precio_venta;
-        this.id_proveedor = id_proveedor;
-    }
+//    public PRODUCTOS(String ref, String nombre, double precio_compra, double precio_venta, int id_proveedor) {
+//        this.ref = ref;
+//        this.nombre = nombre;
+//        this.precio_compra = precio_compra;
+//        this.precio_venta = precio_venta;
+//        this.id_proveedor = id_proveedor;
+//    }
     
     public void insertarProducto(String ref, String nombre, int id_proveedor, double precio_compra, double precio_venta){
-        String query = "INSERT INTO Productos (ref, nombre, id_proveedor, precio_compra, precio_venta) values (?,?,?,?,?)";
+        String query = "INSERT INTO productos (ref, nombre, id_proveedor, precio_compra, precio_venta) values (?,?,?,?,?)";
         try {
             Connection con = Conexion.conectar();
             PreparedStatement ps = con.prepareStatement(query);
@@ -44,7 +45,8 @@ public abstract class PRODUCTOS {
     }
     
     public void editarProducto(int id_producto, String ref, String nombre, int id_proveedor, double precio_compra, double precio_venta){
-        String query = "UPDATE productos SET ref = ?, nombre = ?, id_proveedor = ?, precio_compra = ?, precio_venta WHERE id_producto = ?";
+//        UPDATE productos SET ref = "new", nombre = "m801plus", id_proveedor = 7, precio_compra = 10000.0, precio_venta = 20000.0 WHERE id_producto = 12;
+        String query = "UPDATE productos SET ref = ?, nombre = ?, id_proveedor = ?, precio_compra = ?, precio_venta = ? WHERE id_producto = ?";
         
         try {
             Connection con = Conexion.conectar();
