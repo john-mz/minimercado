@@ -5,6 +5,7 @@
 package modelos;
 
 import java.util.Vector;
+import java.sql.*;
 
 /**
  *
@@ -63,9 +64,9 @@ public abstract class PRODUCTOS {
         this.proveedor = proveedor;
     }
     
-    public String crear_producto() {
-        String mensaje = "";
-        return mensaje;
+    public void crear_producto() {
+        
+        
     }
     
     public String editar_producto(int id){

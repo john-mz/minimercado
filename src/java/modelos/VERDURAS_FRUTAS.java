@@ -36,9 +36,8 @@ public class VERDURAS_FRUTAS extends PRODUCTOS {
         this.tipo = tipo;
     }
     
-    public String crear_producto(){
-        String mensaje = "";
-        return mensaje;
+    public void crear_producto(){
+        
     }
     
     public String editar_producto(int id){
