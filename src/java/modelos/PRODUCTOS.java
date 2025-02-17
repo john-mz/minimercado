@@ -14,14 +14,14 @@ import java.sql.*;
 public abstract class PRODUCTOS {
     protected String ref, nombre;
     protected double precio_compra, precio_venta;
-    protected Vector<String> proveedor;
+    protected int id_proveedor;
 
-    public PRODUCTOS(String ref, String nombre, double precio_compra, double precio_venta, Vector<String> proveedor) {
+    public PRODUCTOS(String ref, String nombre, double precio_compra, double precio_venta, int id_proveedor) {
         this.ref = ref;
         this.nombre = nombre;
         this.precio_compra = precio_compra;
         this.precio_venta = precio_venta;
-        this.proveedor = proveedor;
+        this.id_proveedor = id_proveedor;
     }
     
     public void insertarProducto(String ref, String nombre, int id_proveedor, double precio_compra, double precio_venta){
