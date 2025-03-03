@@ -5,6 +5,8 @@
 package modelos;
 //primero importamos la libreria sql
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author Stiven
@@ -60,5 +62,19 @@ public class usuarios {
             ex.printStackTrace();
         }
     }
+    
+    public ResultSet obtenerUsuarios() {
+    String query = "SELECT * FROM usuarios";
+    try {
+        Connection con = Conexion.conectar();
+        PreparedStatement ps = con.prepareStatement(query);
+        return ps.executeQuery();
+    } catch (SQLException ex) {
+        ex.printStackTrace();
+        return null;
+    }
+}
+
+
     
 }
